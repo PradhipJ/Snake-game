@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake</title>
     <style>
+      .scorediv {
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 100px;
+        display: flex;
+      }
+
       body {
+        overflow: hidden;
+        position: relative;
         height: 100vh;
         width: 100vw;
         display: flex;
@@ -14,6 +25,16 @@
         align-items: center;
         margin: 0;
         background-color: greenyellow;
+      }
+
+      .score {
+        background-color: black;
+        color: white;
+      }
+
+      .value {
+        background-color: black;
+        color: white;
       }
 
       #game-board {
@@ -37,8 +58,13 @@
       }
     </style>
     <script src="game.js" defer type="module"></script>
+    <script src="score.js" defer type="module"></script>
   </head>
   <body>
+    <div class="scorediv">
+      <h1 class="score">Score:</h1>
+      <h1 class="value">0</h1>
+    </div>
     <div id="game-board"></div>
   </body>
 </html>
